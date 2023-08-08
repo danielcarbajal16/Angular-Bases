@@ -8,4 +8,20 @@ import { Component } from '@angular/core';
 export class HeroComponent {
   public name: string = 'ironman';
   public age: number = 45;
+
+  get capitalizeName(): string {
+    return this.name.toUpperCase();
+  }
+
+  getHeroDescription(): string {
+    return `${this.name} - ${ this.age }`;
+  }
+
+  changeName(): void {
+    this.name = 'Hulk'
+  }
+
+  changeAge(): void {
+    this.age = 38;
+  }
 }
